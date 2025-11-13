@@ -11,8 +11,7 @@ Testes: xUnit
 Arquitetura do Projeto
 
 BRG/
-│
-├── BRGBackend/                    # API ASP.NET Core
+├── BRGBackend/                         # API ASP.NET Core
 │   ├── Controllers/
 │   ├── Data/
 │   ├── Migrations/
@@ -21,11 +20,11 @@ BRG/
 │   ├── BRGBackend.csproj
 │   └── Program.cs
 │
-├── BRGBackend.Tests/              # Testes de integração (xUnit)
+├── BRGBackend.Tests/                   # Testes de integração (xUnit)
 │   ├── TodosControllerTests.cs
 │   └── BRGBackend.Tests.csproj
 │
-└── frontend/                      # Aplicação SAPUI5
+└── frontend/                           # Aplicação SAPUI5
     └── webapp/
         ├── view/
         ├── controller/
@@ -37,54 +36,63 @@ BRG/
 
         
 
-🚀 Como Rodar o Backend
-🔧 1️⃣ Restaurar dependências
+
+-------------------------------------
+ Como Rodar o Backend
+ 1️⃣ Restaurar dependências
 dotnet restore
 
-🗄️ 2️⃣ Criar o banco via Entity Framework
+ 2️⃣ Criar o banco via Entity Framework
 dotnet ef database update
 
-▶️ 3️⃣ Rodar a API
-dotnet run --project BRGBackend/BRGBackend.csproj
+ 3️⃣ Rodar a API
+cd backend
+
+dotnet run 
 
 📄 Swagger
 
 Acesse a documentação da API em:
 
-👉 http://localhost:5241/swagger/index.html
+ http://localhost:5241/swagger/index.html
+
+---------------------------------------------
 
 🧪 Como Rodar os Testes
 🧭 1️⃣ Entrar no projeto de testes
 cd BRGBackend.Tests
 
-✔️ 2️⃣ Rodar os testes
+2️⃣ Rodar os testes
 dotnet test
 
+
+------------------------------------------------
 🌐 Como Rodar o Frontend SAPUI5
-📦 1️⃣ Instalar UI5 CLI (se ainda não tiver)
+ 1️⃣ Instalar UI5 CLI (se ainda não tiver)
 npm install --global @ui5/cli
 
-🧭 2️⃣ Entrar na pasta do frontend
+ 2️⃣ Entrar na pasta do frontend
 cd frontend
 
-▶️ 3️⃣ Rodar o servidor SAPUI5
+ 3️⃣ Rodar o servidor SAPUI5
 npx ui5 serve --open index.html
+(**para funcionar o backend tambem tem que estar rodando_
 
-🖥️ Endpoint do frontend
+ Endpoint do frontend
+http://localhost:8080/index.html#
 
-👉 http://localhost:8080/index.html#
-
-📡 Endpoints da API
+ Endpoints da API
 🔹 GET /todos
 
 Lista tarefas com paginação, filtro e ordenação.
 
 Parâmetros
-Param	Tipo	Descrição
-page	int	Número da página
-pageSize	int	Itens por página
-title	string	Filtro por título
-sort	string	Campo de ordenação
+Param	    Tipo	  Descrição
+page	    int  	  Número da página
+pageSize	int	  Itens por página
+title	  string	  Filtro por título
+sort	  string	  Campo de ordenação
+
 Exemplo
 GET http://localhost:5241/todos?page=1&pageSize=10&title=test&sort=title&order=asc
 
@@ -121,7 +129,8 @@ E salva no SQLite.
 
 
 
-✔️ Regra de Negócio
+
+ Regra de Negócio
 
 Cada usuário (userId) só pode ter até 5 tarefas incompletas.
 Se tentar marcar mais uma como incompleta:
@@ -148,16 +157,21 @@ Body:
   "completed": false
 }
 
-✔ Sincronizar dados externos
+
+ Sincronizar dados externos
 POST http://localhost:5241/sync
 
-📦 Scripts Utilizados no Projeto
+
+
+ Scripts Utilizados no Projeto
 ▶ Backend
 Ação	Script
 Restaurar dependências	dotnet restore
 Criar banco EF	dotnet ef database update
-Rodar API	dotnet run --project BRGBackend/BRGBackend.csproj
+acessar pasta  cd backend 
+Rodar API  |	dotnet run 
 Rodar Swagger	http://localhost:5241/swagger/index.html
+
 🌐 Frontend
 Instalar UI5	npm install -g @ui5/cli
 Acessar pasta	cd frontend

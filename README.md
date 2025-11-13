@@ -25,14 +25,14 @@ BRG/
  |
  |
  └── frontend/                  # Aplicação SAPUI5
-      ├── webapp/        
-        ├── view/
-        ├── controller/
-        ├── model/
-        ├── css/
-        ├── manifest.json
-        ├── component.js
-        └── index.html
+ |   ├── webapp/        
+ |      ├── view/
+ |      ├── controller/
+ |      ├── model/
+ |      ├── css/
+ |      ├── manifest.json
+ |      ├── component.js
+ |      └── index.html
         
 
 🚀 Como Rodar o Backend

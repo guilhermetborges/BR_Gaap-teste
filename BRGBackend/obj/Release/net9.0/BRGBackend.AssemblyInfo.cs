@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BRGBackend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+da8248a2428d2a1655eaa9012a6ea2b40ade8cc9")]
 [assembly: System.Reflection.AssemblyProductAttribute("BRGBackend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BRGBackend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

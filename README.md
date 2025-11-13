@@ -10,6 +10,8 @@ Testes: xUnit
 
 Arquitetura do Projeto
 
+```
+
 BRG/
 ├── BRGBackend/                         # API ASP.NET Core
 │   ├── Controllers/
@@ -33,7 +35,7 @@ BRG/
         ├── manifest.json
         ├── Component.js
         └── index.html
-
+```
         
 
 

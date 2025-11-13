@@ -12,7 +12,7 @@ Arquitetura do Projeto
 
 ```
 
-BRG/
+BR_Gaap-teste/
 ├── BRGBackend/                         # API ASP.NET Core
 │   ├── Controllers/
 │   ├── Data/

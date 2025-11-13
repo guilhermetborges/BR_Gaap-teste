@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\BRGBackend\\Controllers",
+    "\\BRGBackend\\Data",
+    "\\BRGBackend\\Models",
+    "\\BRGBackend\\obj\\Release\\net9.0",
+    "\\frontend",
+    "\\frontend\\webapp",
+    "\\frontend\\webapp\\controller",
+    "\\frontend\\webapp\\view"
+  ],
+  "SelectedNode": "\\frontend\\webapp\\controller\\Detail.controller.js",
+  "PreviewInSolutionExplorer": false
+}

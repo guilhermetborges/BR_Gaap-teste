@@ -1,0 +1,8 @@
+.completedTask {
+    background-color: #a62e2e !important;
+}
+
+    .completedTask .sapMText {
+        text-decoration: line-through !important;
+        opacity: 0.6 !important;
+    }

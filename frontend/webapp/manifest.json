@@ -1,0 +1,70 @@
+{
+  "sap.app": {
+    "id": "brgfrontend",
+    "type": "application",
+    "title": "Tarefas BRG",
+    "applicationVersion": {
+      "version": "1.0.0"
+    },
+    "dataSources": {
+      "todosAPI": {
+        "uri": "/api/todos/",
+        "type": "REST"
+      }
+    }
+  },
+
+  "sap.ui5": {
+    "rootView": {
+      "viewName": "brgfrontend.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "app"
+    },
+
+    "dependencies": {
+      "libs": {
+        "sap.m": {},
+        "sap.ui.layout": {}
+      }
+    },
+
+    "models": {
+      "": {
+        "type": "sap.ui.model.json.JSONModel",
+        "dataSource": "todosAPI"
+      }
+    },
+
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "viewPath": "brgfrontend.view",
+        "controlId": "app",
+        "controlAggregation": "pages",
+        "async": true
+      },
+      "routes": [
+        {
+          "pattern": "",
+          "name": "Main",
+          "target": "App"
+        },
+        {
+          "pattern": "detail/{id}",
+          "name": "Detail",
+          "target": "Detail"
+        }
+      ],
+      "targets": {
+        "App": {
+          "viewName": "App"
+        },
+        "Detail": {
+          "viewName": "Detail"
+        }
+      }
+    }
+  }
+}

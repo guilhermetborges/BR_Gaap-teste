@@ -1,0 +1,44 @@
+<mvc:View
+    controllerName="brgfrontend.controller.Detail"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+	<Page title="Detalhes da Tarefa">
+		<content>
+
+			<VBox class="sapUiLargeMargin">
+
+				<!-- ID -->
+				<HBox>
+					<Text text="ID:" class="sapUiSmallMarginEnd sapUiBold"/>
+					<Text text="{todoModel>/todo/id}"/>
+				</HBox>
+
+				<!-- Título -->
+				<HBox class="sapUiSmallMarginTop">
+					<Text text="Título:" class="sapUiSmallMarginEnd sapUiBold"/>
+					<Text text="{todoModel>/todo/title}"/>
+				</HBox>
+
+				<!-- Usuário -->
+				<HBox class="sapUiSmallMarginTop">
+					<Text text="Usuário:" class="sapUiSmallMarginEnd sapUiBold"/>
+					<Text text="{todoModel>/todo/userId}"/>
+				</HBox>
+
+				<!-- Concluída -->
+				<HBox class="sapUiSmallMarginTop">
+					<Text text="Concluída:" class="sapUiSmallMarginEnd sapUiBold"/>
+					<Text text="{path:'todoModel>/todo/completed', formatter:'.formatCompleted'}}"/>
+				</HBox>
+
+				<Button
+                    class="sapUiSmallMarginTop"
+                    text="Voltar"
+                    press="onNavBack"/>
+			</VBox>
+
+		</content>
+	</Page>
+
+</mvc:View>

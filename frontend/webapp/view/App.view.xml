@@ -1,0 +1,69 @@
+<mvc:View
+    controllerName="brgfrontend.controller.App"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m"
+    displayBlock="true">
+
+	<App id="app">
+		<Page title="Lista de Tarefas">
+			<content>
+				<VBox class="sapUiSmallMargin">
+
+					<SearchField
+                        id="searchField"
+                        placeholder="Pesquisar por título..."
+                        liveChange="onSearchLive"
+                        width="100%" />
+
+					<BusyIndicator
+                        id="busyIndicator"
+                        visible="{/loading}" />
+
+					<Table id="todosTable" items="{/todos}">
+						<columns>
+							<Column>
+								<Text text="Título" />
+							</Column>
+							<Column>
+								<Text text="Usuário" />
+							</Column>
+							<Column>
+								<Text text="Concluída" />
+							</Column>
+							<Column></Column>
+						</columns>
+
+						<items>
+							<ColumnListItem
+                                type="Active"
+                                press="onNavToDetail"
+                                class="{= ${completed} ? 'completedTask' : '' }">
+
+								<cells>
+									<Text text="{title}" />
+									<Text text="{userId}" />
+
+									<CheckBox
+                                        selected="{completed}"
+                                        select="onToggleCompleted" />
+
+									<Button text="Detalhes" press="onNavToDetail" />
+								</cells>
+
+							</ColumnListItem>
+						</items>
+					</Table>
+
+					<Toolbar>
+						<Button text="Anterior" press="onPrevPage" />
+						<Text text="{/pageText}" />
+						<Button text="Próxima" press="onNextPage" />
+					</Toolbar>
+
+				</VBox>
+			</content>
+		</Page>
+	</App>
+
+</mvc:View>

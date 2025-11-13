@@ -61,10 +61,13 @@ Acesse a documentação da API em:
 ---------------------------------------------
 
 🧪 Como Rodar os Testes
-🧭 1️⃣ Entrar no projeto de testes
-cd BRGBackend.Tests
 
-2️⃣ Rodar os testes
+
+1️⃣Entrar no projeto de testes:
+- cd BRGBackend.Tests
+
+
+2️⃣ Rodar os testes:
 dotnet test
 
 

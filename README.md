@@ -86,10 +86,13 @@ npx ui5 serve --open index.html
  Endpoint do frontend
 http://localhost:8080/index.html#
 
+---------------------------------------------
+
  Endpoints da API
 🔹 GET /todos
 
 Lista tarefas com paginação, filtro e ordenação.
+
 
 Parâmetros
 Param	    Tipo	  Descrição
@@ -98,8 +101,10 @@ pageSize	int	  Itens por página
 title	  string	  Filtro por título
 sort	  string	  Campo de ordenação
 
+
 Exemplo
 GET http://localhost:5241/todos?page=1&pageSize=10&title=test&sort=title&order=asc
+
 
 🔹 GET /todos/{id}
 
@@ -115,6 +120,7 @@ Body
 {
   "completed": true
 }
+
 
 Exemplo
 PUT http://localhost:5241/todos/10
@@ -133,7 +139,7 @@ https://jsonplaceholder.typicode.com/todos
 E salva no SQLite.
 
 
-
+------------------------------------------
 
  Regra de Negócio
 
@@ -144,6 +150,7 @@ HTTP 400
 {
   "message": "O usuário já possui 5 tarefas incompletas."
 }
+
 
 📄 Exemplos de Requests
 ✔ Listar tarefas (com filtros)
@@ -166,7 +173,7 @@ Body:
  Sincronizar dados externos
 POST http://localhost:5241/sync
 
-
+----------------------------------------------
 
  Scripts Utilizados no Projeto
 ▶ Backend

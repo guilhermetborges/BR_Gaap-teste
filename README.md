@@ -8,31 +8,33 @@ Frontend: SAPUI5
 
 Testes: xUnit
 
-🏗️ Arquitetura do Projeto
+Arquitetura do Projeto
+
 BRG/
- ├── BRGBackend/                # API ASP.NET Core
- │    ├── Controllers/
- │    ├── Data/
- │    ├── Migrations/
- │    ├── Models/
- │    ├── appsettings.json
- │    ├── BRGBackend.csproj
- |    └── program.cs
- │    
- ├── BRGBackend.Tests/          # Testes de integração (xUnit)
- │    ├── TodosControllerTests.cs
- |    └── BRGBackend.Tsts.csproj
- |
- |
- └── frontend/                  # Aplicação SAPUI5
- |   ├── webapp/        
- |      ├── view/
- |      ├── controller/
- |      ├── model/
- |      ├── css/
- |      ├── manifest.json
- |      ├── component.js
- |      └── index.html
+│
+├── BRGBackend/                    # API ASP.NET Core
+│   ├── Controllers/
+│   ├── Data/
+│   ├── Migrations/
+│   ├── Models/
+│   ├── appsettings.json
+│   ├── BRGBackend.csproj
+│   └── Program.cs
+│
+├── BRGBackend.Tests/              # Testes de integração (xUnit)
+│   ├── TodosControllerTests.cs
+│   └── BRGBackend.Tests.csproj
+│
+└── frontend/                      # Aplicação SAPUI5
+    └── webapp/
+        ├── view/
+        ├── controller/
+        ├── model/
+        ├── css/
+        ├── manifest.json
+        ├── Component.js
+        └── index.html
+
         
 
 🚀 Como Rodar o Backend
